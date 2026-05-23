@@ -1,0 +1,82 @@
+{
+  "CP Boilerplate": {
+    "scope": "cpp",
+    "prefix": "cp",
+    "body": [
+      "#include <iostream>",
+      "#include <bits/stdc++.h> ",
+      "using namespace std;",
+      "",
+      "#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);",
+      "#define ll long long",
+      "#define pb push_back",
+      "#define all(x) (x).begin(), (x).end()",
+      "#define nl '\\n'",
+      "",
+      "void solve() {",
+      "    $1",
+      "}",
+      "",
+      "int main() {",
+      "    fast_io;",
+      "    int t = 1;",
+      "    cin >> t;",
+      "    while (t--) {",
+      "        solve();",
+      "    }",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ CP Boilerplate"
+  },
+  "Square Root Decomposition": {
+    "scope": "cpp",
+    "prefix": "sqrtd",
+    "body": [
+      "int m = sqrtl(n) + 1;",
+      "vector<long long> dec((n + m - 1) / m, 0);",
+      "",
+      "for(int i = 0; i < n; i++) {",
+      "    dec[i / m] += arr[i];",
+      "}",
+      "",
+      "while(q--) {",
+      "    int l, r;",
+      "    cin >> l >> r;",
+      "    l--; r--;",
+      "    long long sum = 0;",
+      "    for(int i = l; i <= r;) {",
+      "        if(i % m == 0 && i + m - 1 <= r) {",
+      "            sum += dec[i / m];",
+      "            i += m;",
+      "        } else {",
+      "            sum += arr[i];",
+      "            i++;",
+      "        }",
+      "    }",
+      "    cout << sum << '\\n';",
+      "}"
+    ],
+    "description": "Square Root Decomposition for Range Sum"
+  },
+  "PBDS Ordered Set": {
+    "scope": "cpp",
+    "prefix": "pbds",
+    "body": [
+      "#include <ext/pb_ds/assoc_container.hpp>",
+      "#include <ext/pb_ds/tree_policy.hpp>",
+      "",
+      "using namespace __gnu_pbds;",
+      "",
+      "template<typename T>",
+      "using ordered_set = tree<",
+      "    T,",
+      "    null_type,",
+      "    less<T>,",
+      "    rb_tree_tag,",
+      "    tree_order_statistics_node_update>;"
+    ],
+    "description": "Policy-Based Data Structure (Ordered Set)"
+  }
+
+}
